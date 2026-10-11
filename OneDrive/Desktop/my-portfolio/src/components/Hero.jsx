@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import profilePhoto from "../assets/profile.png";
 
@@ -162,8 +161,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <a className="hero-scroll" href="#about">
+      {/* Scroll indicator — navigates to Projects */}
+      <a className="hero-scroll" href="#projects">
         <span className="scroll-line" aria-hidden="true" />
         Explore my work
         <span aria-hidden="true">↓</span>
