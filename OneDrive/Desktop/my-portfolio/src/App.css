@@ -240,16 +240,30 @@ img {
 /* Supports both hero layouts used in your project. */
 
 .portfolio-hero {
+ .portfolio-hero {
   position: relative;
-  isolation: isolate;
-  min-height: 620px;
-  padding: 90px 24px 45px;
+  min-height: 100vh;
+  padding: 70px 6% 40px;
+  display: flex;
+  align-items: center;
   overflow: hidden;
+}
   background:
     radial-gradient(ellipse at 12% 15%, rgba(59, 130, 246, 0.12), transparent 43%),
     radial-gradient(ellipse at 85% 65%, rgba(139, 92, 246, 0.12), transparent 42%);
 }
+@media (max-width: 768px) {
+  .portfolio-hero {
+    min-height: auto;
+    padding: 100px 5% 50px;
+  }
+}
 
+@media (max-width: 480px) {
+  .portfolio-hero {
+    padding: 85px 5% 40px;
+  }
+}
 .hero-inner {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
@@ -2560,4 +2574,15 @@ a.contact-detail:hover {
   .skill-card:hover {
     transform: none;
   }
+}
+
+/* Hand cursor for interactive elements */
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+summary,
+label[for] {
+  cursor: pointer;
 }
